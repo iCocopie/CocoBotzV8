@@ -26,7 +26,7 @@ module.exports = {
                 if (typeof user !== 'object') global.db.data.users[m.sender] = {}
                 if (user) {
                     if (!isNumber(user.exp)) user.exp = 0
-                    if (!isNumber(user.limit)) user.limit = 10
+                    if (!isNumber(user.limit)) user.limit = 50
                     if (!isNumber(user.lastclaim)) user.lastclaim = 0
                     if (!('registered' in user)) user.registered = false
                     if (!user.registered) {
@@ -43,8 +43,8 @@ module.exports = {
                     if (!('autolevelup' in user)) user.autolevelup = false
 
                     if (!isNumber(user.money)) user.money = 0
-                    if (!isNumber(user.healt)) user.healt = 100
-                    if (!isNumber(user.limit)) user.limit = 0
+                    if (!isNumber(user.healt)) user.healt = 500
+                    if (!isNumber(user.limit)) user.limit = 50
                     if (!isNumber(user.potion)) user.potion = 0
                     if (!isNumber(user.sampah)) user.sampah = 0
                     if (!isNumber(user.kayu)) user.kayu = 0
@@ -100,7 +100,7 @@ module.exports = {
                     if (!isNumber(user.warning)) user.warning = 0
                 } else global.db.data.users[m.sender] = {
                     exp: 0,
-                    limit: 10,
+                    limit: 50,
                     lastclaim: 0,
                     registered: false,
                     name: m.name,
@@ -115,7 +115,7 @@ module.exports = {
                     autolevelup: false,
 
                     money: 0,
-                    healt: 100,
+                    healt: 500,
                     limit: 100,
                     potion: 10,
                     sampah: 0,
@@ -172,15 +172,15 @@ module.exports = {
                 if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
                 if (chat) {
                     if (!('isBanned' in chat)) chat.isBanned = false
-                    if (!('welcome' in chat)) chat.welcome = false
-                    if (!('detect' in chat)) chat.detect = false
+                    if (!('welcome' in chat)) chat.welcome = true
+                    if (!('detect' in chat)) chat.detect = true
                     if (!('sWelcome' in chat)) chat.sWelcome = ''
                     if (!('sBye' in chat)) chat.sBye = ''
                     if (!('sPromote' in chat)) chat.sPromote = ''
                     if (!('sDemote' in chat)) chat.sDemote = ''
-                    if (!('delete' in chat)) chat.delete = true
+                    if (!('delete' in chat)) chat.delete = false
                     if (!('antiBadword' in chat)) chat.antiBadword = false
-                    if (!('antiLink' in chat)) chat.antiLink = false
+                    if (!('antiLink' in chat)) chat.antiLink = true
                     if (!('rpg' in chat)) chat.delete = true
                     if (!('nsfw' in chat)) chat.delete = false
                     if (!('simi' in chat)) chat.simi = false
@@ -188,14 +188,14 @@ module.exports = {
                     if (!('antiToxic' in chat)) chat.antiToxic = false
                 } else global.db.data.chats[m.chat] = {
                     isBanned: false,
-                    welcome: false,
-                    detect: false,
+                    welcome: true,
+                    detect: true,
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
-                    delete: true,
-                    antiLink: false,
+                    delete: false,
+                    antiLink: true,
                     rpg: true,
                     nsfw: false,
                     simi: false,
@@ -375,11 +375,12 @@ module.exports = {
                         continue
                     }
                     m.isCommand = true
-                    let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
+                    let xp = 'exp' in plugin ? parseInt(plugin.exp) : 20 // XP Earning per command
                     if (xp > 200) m.reply('Ngecit -_-') // Hehehe
                     else m.exp += xp
                     if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                        this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+                        this.reply(m.chat, `「 *Rejected* 」
+Limit Anda Telah Habis, Silahkan Beli Limit Dengan Menggunakan Command *${usedPrefix}buy*\nContoh : #buy 5`, m)
                         continue // Limit habis
                     }
                     if (plugin.level > _user.level) {
@@ -428,7 +429,7 @@ module.exports = {
                                 console.error(e)
                             }
                         }
-                        if (m.limit) m.reply(+ m.limit + ' Limit terpakai')
+                        if (m.limit) m.reply(+ m.limit + ' Limit Terpakai')
                     }
                     break
                 }
@@ -539,15 +540,15 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-        owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-        mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-        premium: 'Perintah ini hanya untuk member _*Premium*_ !',
+        rowner: 'Command Ini Hanya Dapat Digunakan Oleh _*Owner*_',
+        owner: 'Command Ini Hanya Dapat Digunakan Oleh _*Owner Bot*_',
+        mods: 'Command Ini Hanya Dapat Digunakan Oleh _*Moderator*_ ',
+        premium: 'Command Ini Hanya Dapat Digunakan Oleh _*Premium Member*_ ',
         group: 'Perintah ini hanya dapat digunakan di grup!',
         private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-        admin: 'Perintah ini hanya untuk *Admin* grup!',
-        botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
+        admin: 'Command Ini Hanya Dapat Digunakan Oleh _*Group Admin*_',
+        botAdmin: 'Jadikan Bot Sebagai *Admin* Mntuk Menggunakan Perintah Ini!',
+        unreg: 'Silahkan Daftar Untuk Menggunakan Fitur Ini Dengan Cara Mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Cocopie.14*',
         restrict: 'Fitur ini di *disable*!'
     }[type]
     if (msg) return m.reply(msg)
