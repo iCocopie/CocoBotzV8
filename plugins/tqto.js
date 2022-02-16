@@ -17,15 +17,22 @@ let handler = async (m) => {
 let tqto = `
 *BIG THANKS TO*
 
-Nurutomo: 
+Nurutomo : 
 https://github.com/Nurutomo
-Istikmal: 
+
+Istikmal : 
 https://github.com/BochilGaming
-Ariffb: 
+
+Ariffb : 
 https://github.com/Ariffb25
-KingOfBear: 
+
+Cocopie :
+https://github.com/iCocopie
+
+KingOfBear : 
 https://github.com/SaipulAnuar
-ilham: 
+
+Ilham : 
 https://github.com/Ilhamskhzyi
 
 `
@@ -38,15 +45,15 @@ https://github.com/Ilhamskhzyi
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '𝙶𝙴𝚃 𝙱𝙾𝚃',
-               url: `${ApiiKey}`
+               displayText: 'Source Code',
+               url: `https://github.com/iCocopie/CocoBotzV8`
              }
 
            },
        
                {
              quickReplyButton: {
-               displayText: '𝙱𝙰𝙲𝙺 𝚃𝙾 𝙼𝙴𝙽𝚄',
+               displayText: 'Back To Menu',
                id: '.menu',
              }
 
