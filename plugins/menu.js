@@ -4,59 +4,59 @@ let path = require('path')
 let fetch = require('node-fetch')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': 'MENU UTAMA',
-  'game': 'MENU GAME',
-  'rpg': 'MENU RPG',
-  'xp': 'MENU EXP',
-  'premium': 'MENU PREMIUM',
-  'group': 'MENU GROUP',
-  'absen': 'MENU ABSEN',
-  'vote': 'MENU VOTE',
-  'owner': 'MENU OWNER',
-  'fun': 'MENU FUN',
-  'sticker': 'MENU CONVERT',
-  'maker': 'MENU MAKER',
-  'github': 'MENU GITHUB',
-  'internet': 'INTERNET',
-  'kerang': 'MENU KERANG',
-  'anime': 'MENU ANIME',
-  'downloader': 'DOWNLOADER',
-  'nsfw': 'MENU NSFW',
-  'tools': 'MENU TOOLS',
-  'advanced': 'ADVANCED',
-  'quotes': 'MENU QUOTES',
-  'info': 'MENU INFO',
+  'main': 'Main Menu',
+  'game': 'Game Menu',
+  'rpg': 'Epic RPG Menu',
+  'xp': 'Exp Menu',
+  'premium': 'Premium Menu',
+  'group': 'Group Menu',
+  'absen': 'Absen Menu',
+  'vote': 'Vote Menu',
+  'owner': 'Owner Menu',
+  'fun': 'Fun Menu',
+  'sticker': 'Convert Menu',
+  'maker': 'Maker Menu',
+  'github': 'GitHub Menu',
+  'internet': 'Internet Menu',
+  'kerang': 'Kerang Ajaib',
+  'anime': 'Anime Menu',
+  'downloader': 'Download Menu',
+  'tools': 'Tools Menu',
+  'advanced': 'Advanced',
+  'quotes': 'Quotes Menu',
+  'info': 'Info Menu',
 }
 const defaultMenu = {
   before: `
-┏━━━ꕥ〔 *${namabot}* 〕ꕥ━⬣
-┃✾ Hai, %name!
-┃
-┃✾ Tersisa *%limit Limit*
-┃✾ Role *%role*
-┃✾ Level *%level (%exp / %maxexp)* 
-┃✾ [%xp4levelup]
-┃✾ %totalexp XP secara Total
-┗━ꕥ
-┏━ꕥ 
-┃✾ Hari : *%week %weton* 
-┃✾ Tanggal : *%date*
-┃✾ Tanggal Islam : *%dateIslamic*
-┃✾ Jam : *%time Wib*
-┗━ꕥ
-┏━ꕥ
-┃✾ Uptime: *%uptime (%muptime)*
-┃✾ Database: %rtotalreg dari %totalreg
-┃✾ Youtube:
-┃✾ https://youtu.be/Sgb5BVOW66Y
-┗━━━━━━ꕥ
+Halo *%name* 😊
+
+🎀 Hari : *%week %weton* 
+🗓️ Tanggal Masehi : *%date*
+📆 Tanggal Hijriyah : *%dateIslamic*
+⏲ Jam *%time Wib*
+
+❏ 👤 *USER INFO*
+🪀 WhatsApp Version : 2.21.24.22
+🎁 Limit : *%limit*
+🏷 Role : *%role*
+🗞 Level : *%level* 
+🚀 Total XP : %totalexp
+
+❏ 🤖️ *BOT INFO*
+🪄 Mode : Multi Mode
+🧭 Prefix : Multi Prefix
+💻 Platform : Linux
+🌏 Browser : Chrome
+🌐 Server : Baileys
+⏰ Uptime: *%uptime (%muptime)*
+📥 Database: %rtotalreg Of %totalreg
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ ⎙ %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '「 %category 」',
+  body: '%cmd %islimit %isPremium',
+  footer: '\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+*CocoBotz V8*
+Created By Cocopie & Nurutomo
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, command }) => {
@@ -168,35 +168,35 @@ let handler = async (m, { conn, usedPrefix: _p, command }) => {
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'source code',
-               url: `${ApiiKey}`
+               displayText: 'Source Code',
+               url: `https://github.com/iCocopie/CocoBotzV8`
              }
 
            },
              {
              callButton: {
-               displayText: '𝚙𝚑𝚘𝚗𝚎 𝚗𝚞𝚖𝚋𝚎𝚛',
-               PhoneNumber: '6288279268363'
+               displayText: 'Phone Number',
+               PhoneNumber: '628992029499'
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁',
+               displayText: 'Owner',
                id: '.owner',
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '𝙶𝙴𝚃 𝙱𝙾𝚃',
+               displayText: 'Donasi',
                id: '.donasi',
              }
 
            },
            {
              quickReplyButton: {
-               displayText: 'YukiBot 𝚝𝚎𝚊𝚖',
+               displayText: 'CocoBotz T𝚎𝚊𝚖',
                id: '.tqto',
              }
            }]
