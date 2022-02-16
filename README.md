@@ -1,10 +1,10 @@
 <p align="center">
-<img src="https://images.app.goo.gl/oMFvBJ7rYaTsbdo48" alt="YUKI BOT" width="500"/>
+<img src="https://images.app.goo.gl/oMFvBJ7rYaTsbdo48" alt="COCOBOTZ" width="500"/>
 
 
 </p>
 <p align="center">
-<a href="#"><img title="YUKI BOT MULTI DEVICE" src="https://img.shields.io/badge/YUKI BOT MULTI DEVICE-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="COCOBOTZ MULTI DEVICE" src="https://img.shields.io/badge/YUKI BOT MULTI DEVICE-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/saipulanuar/v19-Md"><img title="Author" src="https://img.shields.io/badge/Author-KINGOFBEAR-red.svg?style=for-the-badge&logo=github"></a>
@@ -24,10 +24,10 @@
 </div>
 ---
 
-# YUKI BOT Whatsapp MD
+# CocoBotz Whatsapp MD
 ## For Users Termux Install Module [here](https://github.com/Ilhamskhyzi/node_modules)
 ## Information
-> YUKI BOT whatsapp using a Baileys library.
+> CocoBotz whatsapp using a Baileys library.
 > Jika kamu menemukan semacam bug, harap untuk dimaklumi sementara
 >
 > • NOTE: Pastikan Jaringan kalian lancar dan device kalian bagus:v, 
