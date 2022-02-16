@@ -36,7 +36,7 @@
 
 <h3 align="center">Made by :</h3>
 <p align="center">
-  <a href="https://github.com/icocopie"><img src="https://github.com/saipulanuar.png?size=128" height="128" width="128" /></a>
+  <a href="https://github.com/icocopie"><img src="https://github.com/icocopie.png?size=128" height="128" width="128" /></a>
   <a href="https://github.com/nurutomo"><img src="https://github.com/nurutomo.png?size=128" height="128" width="128" /></a>
 </p>
 
@@ -158,8 +158,8 @@ Jika berhasil, akan memberikanmu pesan seperti: `SUCCESS: specified value was sa
 ```
 
 # Thanks to
- [![Nurutomo](https://github.com/Nurutomo.png?size=150)](https://github.com/Nurutomo) | [![KingOfBear](https://github.com/saipulanuar.png?size=150)](https://github.com/saipulanuar) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming)
+ [![Nurutomo](https://github.com/Nurutomo.png?size=150)](https://github.com/Nurutomo) | [![Cocopie](https://github.com/icocopie.png?size=150)](https://github.com/saipulanuar) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming)
 ----|----|----
 [Nurutomo](https://github.com/Nurutomo) | [Cocopie](https://github.com/iCocopie) | [Istikmal](https://github.com/BochilGaming)
- Author | yg nambah fitur | yg punya sc
+ Author | Yg Nambah Fitur | Yg Punya SC
 
